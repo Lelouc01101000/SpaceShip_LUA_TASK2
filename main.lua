@@ -10,7 +10,7 @@ CrabMeteor = require "CrabMeteor"
 LobsterMeteor = require "LobsterMeteor"
 AnimatedExplosion = require "AnimatedExplosion"
 
--- Pixel Collision Helper (Global)
+-- Pixel Collision Helper
 function checkPixelCollision(a, b) 
     local ax1 = a.x - a.width / 2
     local ay1 = a.y - a.height / 2
@@ -481,7 +481,6 @@ function love.update(dt)
         local ease = t * t 
         baseSpawnTimer = config.start - (config.start - config.min) * ease
 
-        -- UPDATE: NEW SPAWN RATES AS REQUESTED
         meteorSpawnRate = baseSpawnTimer
         phoenixSpawnRate = baseSpawnTimer * 12
         trackerSpawnRate = baseSpawnTimer * 31
